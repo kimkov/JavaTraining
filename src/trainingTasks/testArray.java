@@ -17,7 +17,8 @@ public class testArray {
         index[2] = 0;
         index[3] = 2;
 
-        int ref;
+        @SuppressWarnings("unused")
+		int ref;
         while (y < 4) {
             ref = index[y];
             y += 1;

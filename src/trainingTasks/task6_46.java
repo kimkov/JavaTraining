@@ -34,28 +34,28 @@ class NumFunc {
     }
 
     boolean isEven() {
-        for (Integer ignored : arrNew()) {
+        for (@SuppressWarnings("unused") Integer i : arrNew()) {
             s1 += 1;
         }
         return (s1 % 2) == 0;
     }
 
     boolean isFour() {
-        for (Integer ignored : arrNew()) {
+        for (@SuppressWarnings("unused") Integer i : arrNew()) {
             s1 += 1;
         }
         return s1 == 4;
     }
 
     boolean isFirst() {
-        for (Integer ignored : arrNew()) {
+        for (@SuppressWarnings("unused") Integer i : arrNew()) {
             s1 = arr.get(0);
         }
         return s1 <= 6;
     }
 
     boolean isFirstLast() {
-        for (Integer ignored : arrNew()) {
+        for (@SuppressWarnings("unused") Integer i : arrNew()) {
             s1 = arr.get(0);
             s3 = arr.get(arr.size() - 1);
         }

@@ -41,7 +41,7 @@ class FindSecondInArr {
                 arr.add(t);
                 x /= 10;
             }
-            for (int ignored : arr) {
+            for (@SuppressWarnings("unused") int i : arr) {
                 num = arr.get(arr.size() - 2);
                 break;
             }

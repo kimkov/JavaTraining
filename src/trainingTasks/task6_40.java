@@ -42,7 +42,7 @@ class FindThirdArr {
                 arr.add(p);
                 x /= 10;
             }
-            for (int ignored : arr) {
+            for (@SuppressWarnings("unused") int i : arr) {
                 result = arr.get(arr.size() - 3);
                 break;
             }
