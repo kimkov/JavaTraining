@@ -2,8 +2,8 @@ package trainingTasks;
 
 class Stack {
     // создание стека в котором можно хранить до 10 целочисленных значений
-    int[] stck = new int[10];
-    int tos;
+    private int[] stck = new int[10];
+    private int tos;
 
     // инициализировать вершину стека
     Stack() {
