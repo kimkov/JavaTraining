@@ -24,7 +24,7 @@ class Ob extends Oa {
 
 public class AOverRide {
     public static void main(String[] args) {
-        Ob subOb = new Ob(1, 2, 3);
+        Ob subOb = new Ob(19, 26, 33);
 
         subOb.show("This is K: ");
         subOb.show();
