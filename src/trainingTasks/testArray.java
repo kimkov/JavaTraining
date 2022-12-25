@@ -24,7 +24,5 @@ public class testArray {
             y += 1;
 
         }
-
-
     }
 }
