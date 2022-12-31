@@ -1,27 +1,25 @@
 package trainingTasks;
 
-//class S27 {
-//	int[] nums;
-//	int val;
-//	
-//	S27(int[] nums, int val) {
-//		this.nums = nums;
-//		this.val = val;
-//	}
-//	
-//	public void removeElement(int[] nums, int val) {
-//		int count = nums.length;
-//		for(int i = 0; i < nums.length; i++) {
-//			if(nums[i] == val) {
-//				nums[i - 1] = nums[i];
-//				count--;
-//			} else {
-//				continue;
-//			}
-//			System.out.println(nums[i]);
-//		}
-//	}
-//}
+class S27 {
+	int[] nums;
+	int val;
+	
+	S27(int[] nums, int val) {
+		this.nums = nums;
+		this.val = val;
+	}
+	
+	public int removeElement(int[] nums, int val) {
+		int i = 0;
+		for(int j = 0; j < nums.length; j++) {
+			if(nums[j] != val) {
+				nums[i] = nums[j];
+				i++;
+			}
+		}
+		return i;
+	}
+}
 
 public class Leet27 {
 	public static void main(String[] args) {
@@ -32,15 +30,6 @@ public class Leet27 {
 		}
 		System.out.println(" ");
 		
-		for(int a = 0; a < nums.length; a++) {
-			if(nums[a] == val) {
-				nums[a - 1] = nums[a];
-			} else {
-				continue;
-			}
-			for(int j = 0; j < nums.length; j++) {
-				System.out.print(nums[a]);
-			}
-		}
+		
 	}
 }
