@@ -14,7 +14,7 @@ class S11_10 {
 	void Sol11_10() {
 		int y = 0;
 
-		for(int i = 0; i < nums.length; i++) {
+		for(int i = 0; x > 0; i++) {
 			y = x % 10;
 			nums[i] = y;
 			x /= 10;
