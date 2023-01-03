@@ -28,7 +28,9 @@ class S1089 {
 					arr[j] = arr[i];
 			}
 		}
-		System.out.println(arr);
+		for(int s = 0; s < arr.length; s++) {
+			System.out.print(arr[s]);
+		}
 	}
 }
 
