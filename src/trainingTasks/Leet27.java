@@ -24,6 +24,7 @@ class S27 {
 public class Leet27 {
 	public static void main(String[] args) {
 		int[] nums = new int[] {3, 2, 2, 3};
+		@SuppressWarnings("unused")
 		int val = 3;
 		for(int i = 0; i < nums.length; i++) {
 			System.out.print(nums[i] + " ");

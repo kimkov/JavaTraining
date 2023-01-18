@@ -3,6 +3,7 @@ package trainingTasks;
 import java.util.List;
 
 class Solution2 {
+	@SuppressWarnings("null")
 	public List<String> FizzBuzz(int n) {
 		List<String> answer = null;
 		

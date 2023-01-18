@@ -76,6 +76,7 @@ public class MITMergeSort1 {
 	public static void main(String[] args) {
 		int[] nums = new int[] {3, 41, 52, 17, 26, 38, 57, 9, 49};
 		
+		@SuppressWarnings("unused")
 		MMergeSort sl = new MMergeSort(nums);
 		
 		MMergeSort.sMerge(nums);

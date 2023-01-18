@@ -2,16 +2,7 @@ package trainingTasks;
 
 class S88 {
 	
-	private int[] nums1;
-	private int[] nums2;
-	private int m;
-	private int n;
-	
 	S88(int[] nums1, int m, int[] nums2, int n) {
-		this.nums1 = nums1;
-		this.nums2 = nums2;
-		this.m = m;
-		this.n = n;
 	}
 	
 	void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -43,6 +34,6 @@ public class Leet88 {
 		int n = 3;
 		
 		System.out.print(nums1);
-		S88 mg = new S88(nums1, m, nums2, n);
+		new S88(nums1, m, nums2, n);
 	}
 }

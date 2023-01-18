@@ -6,7 +6,7 @@ class S1051 {
 	private int[] heights;
 	
 	S1051(int[] heights) {
-		this.heights = heights;
+		this.setHeights(heights);
 	}
 	
 	int heightChecker(int[] heights) {
@@ -25,6 +25,14 @@ class S1051 {
 			}
 		}
 		return ind;
+	}
+
+	public int[] getHeights() {
+		return heights;
+	}
+
+	public void setHeights(int[] heights) {
+		this.heights = heights;
 	}
 }
 

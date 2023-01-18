@@ -15,7 +15,7 @@ class S414 {
 		
 		// Implementation with minHeap approach
 		
-        PriorityQueue<Integer> minHeap = new PriorityQueue();
+        PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
         Set<Integer> taken = new HashSet<Integer>();
         
         for (int index = 0; index < nums.length; ++index) {
