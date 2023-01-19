@@ -12,7 +12,8 @@ public class MITHeapSort {
   
       //Extract elements from heap one by one
       for (int i = n - 1; i >= 0; i--) {
-        //Current root moved to the end
+        /*Move current root element to the end
+    	 swap nums[0] with nums[i]*/
         int tmp = arr[0];
         arr[0] = arr[i];
         arr[i] = tmp;
@@ -23,8 +24,8 @@ public class MITHeapSort {
   
     void heapify(int arr[], int n, int i) {
       int max = i; //Initialize max as root
-      int leftChild = 2 * i + 1;
-      int rightChild = 2 * i + 2;
+      int leftChild = 2 * i + 1; // left child
+      int rightChild = 2 * i + 2; // right child
   
       //If left child is greater than root
       if (leftChild < n && arr[leftChild] > arr[max])
@@ -36,6 +37,7 @@ public class MITHeapSort {
   
       //If max is not root
       if (max != i) {
+    	  // swap nums[i] with max
         int swap = arr[i];
         arr[i] = arr[max];
         arr[max] = swap;
