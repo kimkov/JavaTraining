@@ -3,12 +3,12 @@ package trainingTasks;
 public class MITHeapSort {
   
     public void sort(int arr[]) {
-      int n = arr.length;
-  
-      //Rearrange array (building heap)
-      for (int i = n / 2 - 1; i >= 0; i--) {
-        heapify(arr, n, i);
-      }
+    	
+    	//Building a heap
+    	int n = arr.length;
+    	for (int i = n / 2 - 1; i >= 0; i--) {
+    		heapify(arr, n, i);
+    		}
   
       //Extract elements from heap one by one
       for (int i = n - 1; i >= 0; i--) {
@@ -50,8 +50,9 @@ public class MITHeapSort {
     //print size of array n using utility function
     static void display(int arr[]) {
       int n = arr.length;
-      for (int i = 0; i < n; ++i)
-        System.out.print(arr[i] + " ");
+      for (int i = 0; i < n; ++i) {
+          System.out.print(arr[i] + " ");
+      }
       System.out.println();
     }
   

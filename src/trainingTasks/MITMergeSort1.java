@@ -1,21 +1,18 @@
 package trainingTasks;
 
-class MMergeSort {
-	private int[] nums;
+class sMergeSort {
 	
-	MMergeSort(int[] nums) {
-		this.nums = nums;
+	sMergeSort(int[] nums) {
 	}
 	
-	public int[] getNums() {
+	public int[] getNums(int[] nums) {
 		return nums;
 	}
 	
 	public void setNums(int[] nums) {
-		this.nums = nums;
 	}
 	
-	public static void sMerge(int[] nums) {
+	void sMerge(int[] nums) {
 		int inputLength = nums.length;
 		
 		if(inputLength < 2) {
@@ -23,7 +20,6 @@ class MMergeSort {
 		}
 		
 		int midIndex = nums.length / 2;
-		
 		int[] leftHalf = new int[midIndex];
 		int[] rightHalf = new int[inputLength - midIndex];
 		
@@ -38,10 +34,10 @@ class MMergeSort {
 		sMerge(leftHalf);
 		sMerge(rightHalf);
 		
-		sMergeSort(nums, leftHalf, rightHalf);
+		sHeapSort(nums, leftHalf, rightHalf);
 	}
 	
-	public static void sMergeSort(int[] nums, int[] leftHalf, int[] rightHalf) {
+	void sHeapSort(int[] nums, int[] leftHalf, int[] rightHalf) {
 		int leftSize = leftHalf.length;
 		int rightSize = rightHalf.length;
 		
@@ -74,15 +70,16 @@ class MMergeSort {
 
 public class MITMergeSort1 {
 	public static void main(String[] args) {
+		
 		int[] nums = new int[] {3, 41, 52, 17, 26, 38, 57, 9, 49};
 		
-		@SuppressWarnings("unused")
-		MMergeSort sl = new MMergeSort(nums);
+		sMergeSort sl = new sMergeSort(nums);
 		
-		MMergeSort.sMerge(nums);
+		sl.sMerge(nums);
 		
-		for(int n = 0; n < nums.length; n++) {
-			System.out.print(nums[n] + " ");
+		for(int i = 0; i < nums.length; i++) {
+			System.out.print(nums[i] + " ");
 		}
+		
 	}
 }
