@@ -1,9 +1,9 @@
 package trainingTasks;
 
-class SMITHeapSort1 {
+class SHeapSort {
 	private int[] nums;
 	
-	SMITHeapSort1(int[] nums) {
+	SHeapSort(int[] nums) {
 		this.nums = nums;
 	}
 	
@@ -15,9 +15,9 @@ class SMITHeapSort1 {
 		this.nums = nums;
 	}
 	
-	static void heapSort(int[] nums) {
-		
+	public static void heapSort(int[] nums) {
 		int heapSize = nums.length;
+		
 		for(int i = heapSize / 2 - 1; i >= 0; i--) {
 			heapify(nums, heapSize, i);
 		}
@@ -26,7 +26,7 @@ class SMITHeapSort1 {
 			int swap = nums[0];
 			nums[0] = nums[i];
 			nums[i] = swap;
-		
+			
 			heapify(nums, i, 0);
 		}
 	}
@@ -39,6 +39,7 @@ class SMITHeapSort1 {
 		if(leftChild < heapSize && nums[leftChild] > nums[max]) {
 			max = leftChild;
 		}
+		
 		if(rightChild < heapSize && nums[rightChild] > nums[max]) {
 			max = rightChild;
 		}
@@ -47,21 +48,20 @@ class SMITHeapSort1 {
 			int swap = nums[i];
 			nums[i] = nums[max];
 			nums[max] = swap;
-		
+			
 		heapify(nums, heapSize, max);
 		}
 	}
 }
 
-public class MITHeapSort1 {
+public class MITHeapSort2 {
 	public static void main(String[] args) {
 		int[] nums = new int[] {3, 41, 52, 17, 26, 38, 57, 9, 49};
 		
-		SMITHeapSort1.heapSort(nums);
+		SHeapSort.heapSort(nums);
 		
 		for(int i = 0; i < nums.length; i++) {
 			System.out.print(nums[i] + " ");
 		}
 	}
 }
-
