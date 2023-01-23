@@ -62,8 +62,6 @@ public class MITQuickSort {
 	public static void main(String[] args) {
 		int[] nums = new int[] {3, 41, 52, 17, 26, 10, 38, 57, 9, 49};
 		
-		quickSort sl = new quickSort(nums);
-		
 		quickSort.SolQuickSort(nums, 0, nums.length - 1);
 		
 		for(int i = 0; i < nums.length; i++) {
