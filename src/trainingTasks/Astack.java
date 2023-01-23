@@ -1,12 +1,12 @@
 package trainingTasks;
 
-class Stack {
+class SStack {
     // создание стека в котором можно хранить до 10 целочисленных значений
     private int[] stck = new int[10];
     private int tos;
 
     // инициализировать вершину стека
-    Stack() {
+    SStack(int i) {
         tos = -1;
     }
 
@@ -31,8 +31,8 @@ class Stack {
 
 public class Astack {
     public static void main(String[] args) {
-        Stack myStack1 = new Stack();
-        Stack myStack2 = new Stack();
+        SStack myStack1 = new SStack(10);
+        SStack myStack2 = new SStack(20);
 
         // разместить эти числа в стека
         for (int i = 0; i < 10; i++) myStack1.push(i);
@@ -41,12 +41,14 @@ public class Astack {
         // извлечь эти числа из стека
         System.out.println("Содержимое стека myStack1: ");
         for (int i = 0; i < 10; i++) {
-            System.out.println(myStack1.pop());
+            System.out.print(myStack1.pop() + " ");
         }
+        
+        System.out.println(" ");
 
         System.out.println("Содержимое стека myStack2: ");
         for (int i = 0; i < 10; i++) {
-            System.out.println(myStack2.pop());
+            System.out.print(myStack2.pop() + " ");
         }
     }
 }
