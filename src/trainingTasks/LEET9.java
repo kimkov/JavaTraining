@@ -16,15 +16,21 @@ class S9 {
 	}
 	
 	public boolean SolS9(int x) {
-		boolean result = false;
+		int originalX = x;
+		int tmp = 0;
 		
-		
+		while(x > 0) {
+			tmp = (tmp * 10) + x % 10;
+			x /= 10;
+		}
+
+		return tmp == originalX;
 	}
 }
 
 public class LEET9 {
 	public static void main(String[] args) {
-		int x = 121;
+		int x = 12-1;
 		
 		S9 sl = new S9(x);
 		
