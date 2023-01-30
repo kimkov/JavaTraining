@@ -11,7 +11,9 @@ class Node<E> {
 
 	// Node class constructor used to initializes the data
 	// in each Node
-	Node(E data) { this.data = data; }
+	Node(E data) { 
+		this.data = data; 
+		}
 }
 
 class LinkedList<E> {
@@ -104,8 +106,6 @@ public class MITLinkedList {
 		ll.add(34);
 
 		// Element to be searched
-		int element = -1;
-
 		// Searching the Linked
 		// List for the element
 		int ans = ll.search(-1);
