@@ -1,7 +1,7 @@
 package trainingTasks;
 
 class MyLinkedList {
-    class Node{
+    class Node {
         int val;
         Node next;
         public Node(int v){
