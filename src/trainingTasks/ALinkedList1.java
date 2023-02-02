@@ -10,18 +10,34 @@ class LL {
 		
 		// create pointer for next node
 		Node next;
+		
+		public Node(int v) {
+			val = v;
+			next = null;
+		}
 	}
 	
 	// Assing head of the list
+	int length;
 	Node head;
 	
+	public LL() {
+		length = 0;
+		head = null;
+	}
+	
+	// Adding new elements into List
 	void add(int newVal) {
-		Node newNode1 = new Node();
+		Node newNode1 = new Node(newVal);
 		newNode1.val = newVal;
 		newNode1.next = head;
 		head = newNode1;
 	}
+	//----------------------------------
 	
+	
+	
+	//Return String
 	public String toString() {
 		Node tmp = head;
 		String result = "[";
@@ -49,6 +65,7 @@ public class ALinkedList1 {
 		sl.add(7);
 		sl.add(9);
 		sl.add(44);
+		sl.add(57);
 		
 		System.out.print(myList);
 		
