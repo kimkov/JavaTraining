@@ -1,5 +1,7 @@
 package trainingTasks;
 
+import java.util.LinkedList;
+
 class S21 {
 	
 	private LinkedList<Integer> list1;
@@ -65,7 +67,6 @@ class S21 {
 
 public class LEET21 {
 	public static void main(String[] args) {
-		LinkedList<Integer> list1 = new LinkedList<>();
 		int key = 2;
 		
 		S21 sl = new S21();

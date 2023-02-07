@@ -13,10 +13,10 @@ class Node<E> {
 	// in each Node
 	Node(E data) { 
 		this.data = data; 
-		}
+	}
 }
 
-class LinkedList<E> {
+class LinkedList1<E> {
 
 	// Points to the head of the Linked
 	// List i.e the first element
@@ -94,7 +94,7 @@ class LinkedList<E> {
 public class MITLinkedList {	
 	public static void main(String[] args) throws Exception {
 		// Initializing the Linked List
-		LinkedList<Integer> ll = new LinkedList<>();
+		LinkedList1<Integer> ll = new LinkedList1<>();
 
 		// Adding elements to the Linked List
 		ll.add(1);
@@ -108,7 +108,7 @@ public class MITLinkedList {
 		// Element to be searched
 		// Searching the Linked
 		// List for the element
-		int ans = ll.search(-1);
+		int ans = ll.search(12);
 
 		if (ans == -1) {
 			System.out.println(
