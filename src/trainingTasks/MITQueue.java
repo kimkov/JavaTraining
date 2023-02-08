@@ -4,13 +4,13 @@ import java.util.*;
 
 public class MITQueue {
 	public static void main(String args[]){  
-		PriorityQueue<String> queue=new PriorityQueue<String>();  
+		PriorityQueue<String> queue = new PriorityQueue<>();  
 		
-		queue.add("Amit");  
-		queue.add("Vijay");  
-		queue.add("Karan");  
-		queue.add("Jai");  
-		queue.add("Rahul");  
+		queue.add("Rachel");  
+		queue.add("Italiya");  
+		queue.add("Katarine");  
+		queue.add("Emily");  
+		queue.add("Dariya");  
 		
 		System.out.println("head:" + queue.element());  
 		System.out.println("head:" + queue.peek());  
