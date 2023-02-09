@@ -1,6 +1,8 @@
 package trainingTasks;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 class S217 {
 	private int[] nums;
@@ -18,13 +20,12 @@ class S217 {
 	}
 	
 	public boolean containsDuplicate(int[] nums) {
-		Arrays.sort(nums);
-		for(int i = 0; i < nums.length - 1; i++) {
-			for(int j = i + 1; j < nums.length; j++) {
-				if(nums[i] == nums[j]) {
-					return true;
-				}
+		Set<Integer> arr = new HashSet<>(nums.length);
+		for(int x : nums) {
+			if(arr.contains(x)) {
+				return true;
 			}
+			arr.add(x);
 		}
 		return false;
 	}
@@ -32,7 +33,7 @@ class S217 {
 
 public class LEET217 {
 	public static void main(String[] args) {
-		int[] nums = new int[] {1,2,3,4};
+		int[] nums = new int[] {1,2,3,1};
 		
 		S217 sl = new S217(nums);
 		
