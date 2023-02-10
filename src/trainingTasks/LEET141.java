@@ -1,9 +1,5 @@
 package trainingTasks;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
-
 class S141 {
 	class ListNode {
 		int val;
@@ -15,24 +11,60 @@ class S141 {
 		}
 	}
 	
+	int length;
+	ListNode head;
+	
+	public S141() {
+		length = 0;
+		head = null;
+	}
+	
+	public void add(int newVal) {
+		ListNode newNode = new ListNode(newVal);
+		newNode.val = newVal;
+		newNode.next = head;
+	}
+	
 	public boolean hasCycle(ListNode head) {
-		Set<ListNode> visited = new HashSet<>();
+		if(head == null) {
+			return false;
+		}
 		
-		while(head != null) {
-			if(visited.contains(head)) {
-				return true;
+		ListNode slow = head;
+		ListNode fast = head.next;
+		while(slow != fast) {
+			if(fast == null || fast.next == null) {
+				return false;
 			} else {
-				visited.add(head);
-				head = head.next;
+				slow = slow.next;
+				fast = fast.next.next;
 			}
 		}
-		return false;
+		return true;
+	}
+	
+	public String toPrint() {
+		ListNode tmp = head;
+		String result = "[";
+		while(tmp != null) {
+			result += Integer.toString(tmp.val) + " ";
+			tmp = tmp.next;
+		}
+		result += "]";
+		return result;
 	}
 }
 
 public class LEET141 {
 	public static void main(String[] args) {
-		LinkedList<Integer> head = new LinkedList<>();
+		
+		S141 sk = new S141();
+		
+		sk.add(3);
+		sk.add(3);
+		sk.add(0);
+		sk.add(-4);
+		
 		
 	}
 }
