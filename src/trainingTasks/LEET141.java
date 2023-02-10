@@ -1,35 +1,24 @@
 package trainingTasks;
 
-class S141 {
-	class ListNode {
-		int val;
-		ListNode next;
+import java.util.LinkedList;
+
+class ListNode {
+	int val;
+	ListNode next;
 	
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
+	ListNode(int x) {
+		val = x;
+		next = null;
 	}
+}
+
+public class LEET141 {
 	
-	int length;
-	ListNode head;
-	
-	public S141() {
-		length = 0;
-		head = null;
-	}
-	
-	public void add(int newVal) {
-		ListNode newNode = new ListNode(newVal);
-		newNode.val = newVal;
-		newNode.next = head;
-	}
-	
-	public boolean hasCycle(ListNode head) {
+	public static boolean hasCycle(ListNode head) {
 		if(head == null) {
 			return false;
 		}
-		
+			
 		ListNode slow = head;
 		ListNode fast = head.next;
 		while(slow != fast) {
@@ -43,28 +32,17 @@ class S141 {
 		return true;
 	}
 	
-	public String toPrint() {
-		ListNode tmp = head;
-		String result = "[";
-		while(tmp != null) {
-			result += Integer.toString(tmp.val) + " ";
-			tmp = tmp.next;
-		}
-		result += "]";
-		return result;
-	}
-}
-
-public class LEET141 {
 	public static void main(String[] args) {
+		LinkedList<Integer> ls = new LinkedList<>();
 		
-		S141 sk = new S141();
+		ls.add(3);
+		ls.add(2);
+		ls.add(0);
+		ls.add(-4);
 		
-		sk.add(3);
-		sk.add(3);
-		sk.add(0);
-		sk.add(-4);
+		ListNode head = null;
 		
+		System.out.print(ls);
 		
+		}
 	}
-}
