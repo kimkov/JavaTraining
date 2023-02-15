@@ -57,6 +57,12 @@ class S347 {
 		}
 		return top;
 	}
+	
+	public void printF(int[] top) {
+		for(int i : top) {
+			System.out.print(top[i] + " ");
+		}
+	}
 }
 
 public class LEET347 {
@@ -66,6 +72,8 @@ public class LEET347 {
 		
 		S347 sl = new S347(nums, k);
 		
-		System.out.println(sl);
+		sl.topKFrequent(nums, k);
+		
+		sl.printF(nums);
 	}
 }
