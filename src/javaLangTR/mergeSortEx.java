@@ -1,4 +1,4 @@
-package JavaLangTR;
+package javaLangTR;
 
 class Smergesort {
 	private int[] nums;

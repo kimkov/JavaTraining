@@ -1,4 +1,4 @@
-package JavaLangTR;
+package javaLangTR;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

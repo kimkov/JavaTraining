@@ -1,4 +1,4 @@
-package JavaLangTR;
+package javaLangTR;
 
 class ScountingSort {
 	private int[] nums;
