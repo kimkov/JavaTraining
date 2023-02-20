@@ -7,34 +7,17 @@ import java.util.LinkedList;
 
 public class priorqueue {
 	public static void main(String[] args) {
-		PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.naturalOrder());
+		int[] nums = new int[] {3,2,1,5,6,4};
+		int k = 2;
 		
-		heap.add(7);
-		heap.add(8);
-		heap.add(4);
-		heap.add(0);
-		heap.add(1);
+		PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());
 		
-		int x = heap.poll();
-		
-		System.out.println(x);
-		
-		System.out.println(" ");
-		
-		while(!heap.isEmpty()) {
-			System.out.println(heap.poll());
+		for(int i: nums) {
+			heap.add(i);
 		}
 		
-		System.out.println("queue");
-		
-		Queue<Integer> nums = new LinkedList<>();
-		
-		nums.add(2);
-		nums.add(7);
-		nums.add(4);
-		nums.add(9);
-		nums.add(11);
-		
-		System.out.println(nums);
+		while(!heap.isEmpty()) {
+			System.out.print(heap.poll() + " ");
+		}
 	}
 }
