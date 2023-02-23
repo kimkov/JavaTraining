@@ -19,6 +19,9 @@ public class HashMapTr {
 		// 4. get the value of cpecific key
 		System.out.println("The value of key 1 is: " + map.get(1));
 		
+		System.out.println(map.keySet());
+		System.out.println(map.values());
+		
 		// 5. delete a key
 		map.remove(2);
 		

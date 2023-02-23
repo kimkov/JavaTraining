@@ -1,5 +1,6 @@
 package leet;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,11 +49,7 @@ public class TwoSum_1 {
 		int target = 6;
 		
 		S1 sl = new S1(nums, target);
-		int[] result;
-		result = sl.twoSum(nums, target);
-		
-		for(int i = 0; i < result.length; i++) {
-			System.out.print(result[i] + " ");
-		}
+
+		System.out.println(Arrays.toString(sl.twoSum(nums, target)));
 	}
 }
