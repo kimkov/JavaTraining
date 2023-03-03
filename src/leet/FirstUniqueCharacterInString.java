@@ -1,7 +1,6 @@
 package leet;
 
 import java.util.HashMap;
-import java.util.Map;
 
 class FirstUniqueChar {
 	private String s;
@@ -18,19 +17,18 @@ class FirstUniqueChar {
 		return s;
 	}
 	
-	public int FirstUnCh(String s) {
-		if(s.length() < 2) {
-			return s.indexOf(s);
-		}
-		
-		Map<Character, Integer> map = new HashMap<>();
+	public int findFirstUnq(String s) {
+		HashMap<Character, Integer> map = new HashMap<>();
 		for(int i = 0; i < s.length(); i++) {
-			if(!map.containsKey(s.charAt(i))) {
-				map.put(s.charAt(i), i);
-			}
-			return i;
+			char c = s.charAt(i);
+			map.put(c, map.getOrDefault(c, 0) + 1);
 		}
 		
+		for(int i = 0; i < s.length(); i++) {
+			if(map.get(s.charAt(i)) == 1) {
+				return i;
+			}
+		}
 		return -1;
 	}
 }
@@ -40,6 +38,6 @@ public class FirstUniqueCharacterInString {
 		String s = "loveleetcode";
 		
 		FirstUniqueChar sl = new FirstUniqueChar(s);
-		System.out.println(sl.FirstUnCh(s));
+		System.out.println("First unique character has index - " + sl.findFirstUnq(s));
 	}
 }
