@@ -90,6 +90,80 @@ public class linkedlist {
 		}
 	}
 	
+	public Node get(int index) {
+		if(index < 0 || index >= length) {
+			return null;
+		}
+		Node tmp = head;
+		for(int i = 0; i < index; i++) {
+			tmp = tmp.next;
+		}
+		return tmp;
+	}
+	
+	public boolean set(int index, int value) {
+		Node tmp = get(index);
+		if(tmp != null) {
+			tmp.val = value;
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean insert(int index, int val) {
+		if(index < 0 || index > length) {
+			return false;
+		}
+		if(index == 0) {
+			prepNode(val);
+			return true;
+		}
+		if(index == length) {
+			append(val);
+			return true;
+		}
+		Node nNode = new Node(val);
+		Node tmp = get(index - 1);
+		nNode.next = tmp.next;
+		tmp.next = nNode;
+		length++;
+		return true;
+	}
+	
+	public Node remove(int index) {
+		if(index < 0 || index >= length) {
+			return null; 
+		}
+		if(index == 0) {
+			return removeFirst();
+		}
+		if(index == length - 1) {
+			return removeLast();
+		}
+		Node prev = get(index - 1);
+		Node tmp = prev.next;
+		
+		prev.next = tmp.next;
+		tmp.next = null;
+		length--;
+		return tmp;
+	}
+	
+	public void reverse() {
+		Node tmp = head;
+		head = tail;
+		tail = tmp;
+		Node after = tmp.next;
+		Node before = null;
+		
+		for(int i = 0; i < length; i++) {
+			after = tmp.next;
+			tmp.next = before;
+			before = tmp;
+			tmp = after;
+		}
+	}
+	
 	public void getHead() {
 		System.out.println("Head: " + head.val);
 	}

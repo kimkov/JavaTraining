@@ -21,5 +21,21 @@ public class Main {
 		
 		System.out.println(" ");
 		myList.printlist();
+		
+		System.out.println();
+		System.out.println(myList.get(3).val);
+		System.out.println();
+		System.out.println(myList.set(2, 8));
+		System.out.println();
+		myList.printlist();
+		System.out.println();
+		myList.insert(1, 4);
+		myList.printlist();
+		System.out.println();
+		myList.remove(3);
+		myList.printlist();
+		System.out.println();
+		myList.reverse();
+		myList.printlist();
 	}
 }
