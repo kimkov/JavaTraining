@@ -1,4 +1,4 @@
-package LList;
+package llist;
 
 public class Main {
 	public static void main(String[] args) {

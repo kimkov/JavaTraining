@@ -1,4 +1,4 @@
-package LList;
+package llist;
 
 public class linkedlist {
 	private Node head;

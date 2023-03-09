@@ -40,24 +40,6 @@ public class LinkList {
 		length++;
 	}
 	
-	public Node mergeTwo(Node list1, Node list2) {
-		Node prevH = new Node(-1);
-		Node tmp = prevH;
-		
-		while(list1 != null && list2 != null) {
-			if(list1.val <= list2.val) {
-				tmp.next = list1;
-				list1 = list1.next;
-			} else {
-				tmp.next = list2;
-				list2 = list2.next;
-			}
-			tmp = tmp.next;
-		}
-		tmp.next = list1 == null ? list2 : list1;
-		return prevH.next;
-	}
-	
 	public void printL1() {
 		Node tmp = head;
 		while(tmp != null) {
