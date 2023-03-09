@@ -12,7 +12,7 @@ public class MergeTwoSortedList {
 		list2.appN(2);
 		list2.appN(4);
 		
-		list1.mergeList(null, null);
+//		list1.mergeList(null, null);
 		list1.printL();
 		
 	}
