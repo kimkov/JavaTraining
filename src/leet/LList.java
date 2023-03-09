@@ -35,6 +35,14 @@ public class LList {
 		}
 	}
 	
+	public void printL() {
+		ListNode tmp = head;
+		while(tmp != null) {
+			System.out.print(tmp.val + " ");
+			tmp = tmp.next;
+		}
+	}
+	
 	public ListNode mergeList(ListNode list1, ListNode list2) {
 		ListNode prev = new ListNode(-1);
 		ListNode tmp = prev;

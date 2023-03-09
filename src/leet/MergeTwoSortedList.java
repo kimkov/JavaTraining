@@ -1,7 +1,5 @@
 package leet;
 
-import java.util.LinkedList;
-
 public class MergeTwoSortedList {
 	public static void main(String[] args) {
 		LList list1 = new LList();
@@ -15,7 +13,7 @@ public class MergeTwoSortedList {
 		list2.appN(4);
 		
 		list1.mergeList(null, null);
-		System.out.println(list1.mergeList(list1, list2));
+		list1.printL();
 		
 	}
 }
