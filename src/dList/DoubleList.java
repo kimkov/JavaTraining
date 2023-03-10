@@ -49,4 +49,62 @@ public class DoubleList {
 	public void getLength() {
 		System.out.println("Length: " + length);
 	}
+	
+	public void append(int val) {
+		Node newNode = new Node(val);
+		if(head == null) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.next = newNode;
+			newNode.prev = tail;
+			tail = newNode;
+		}
+		length++;
+	}
+	
+	public Node removeLast() {
+		if(length == 0) {
+			return null;
+		} else {
+			Node tmp = tail;
+			tail = tail.prev;
+			tail.next = null;
+			tmp.prev = null;
+			length--;
+			if(length == 0) {
+				head = null;
+				tail = null;
+			}
+			return tmp;
+		}
+	}
+	
+	public void prepend(int val) {
+		Node newNode = new Node(val);
+		if(head == null) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			newNode.next = head;
+			head.prev = newNode;
+			head = newNode;
+		}
+		length++;
+	}
+	
+	public Node removeFirst() {
+		if(head == null) return null;
+		Node tmp = head;
+		if(length == 1) {
+			head = null;
+			tail = null;
+		} else {
+			head = head.next;
+			head.prev = null;
+			tmp.next = null;
+		}
+			length--;
+		return tmp;
+	}
 }
