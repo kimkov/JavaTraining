@@ -104,7 +104,24 @@ public class DoubleList {
 			head.prev = null;
 			tmp.next = null;
 		}
-			length--;
+		length--;
+		return tmp;
+	}
+	public Node Dget(int index) {
+		if(index < 0 || index >= length) {
+			return null;
+		}
+		Node tmp = head;
+		if(index < length / 2) {
+			for(int i = 0; i < index; i++) {
+				tmp = tmp.next;
+			}
+		} else {
+			tmp = tail;
+			for(int i = length - 1; i > index; i--) {
+				tmp = tmp.prev;
+			}
+		}
 		return tmp;
 	}
 }
