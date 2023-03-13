@@ -2,8 +2,7 @@ package trainingTasks;
 
 import java.util.Scanner;
 
-public class test {
-
+public class test2 {
     public static void main(String[] args) {
         try (Scanner myNum = new Scanner(System.in)) {
             System.out.println("Enter x: ");
