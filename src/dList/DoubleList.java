@@ -124,4 +124,56 @@ public class DoubleList {
 		}
 		return tmp;
 	}
+	
+	public boolean set(int index, int value) {
+		Node tmp = Dget(index);
+		if(tmp != null) {
+			tmp.val = value;
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean insert(int index, int value) {
+		if(index < 0 || index > length) {
+			return false;
+		}
+		if(index == 0) {
+			prepend(value);
+			return true;
+		}
+		if(index == length) {
+			append(value);
+			return true;
+		}
+		Node newNode = new Node(value);
+		Node before = Dget(index - 1);
+		Node after = before.next;
+		
+		newNode.prev = before;
+		newNode.next = after;
+		before.next = newNode;
+		after.prev = newNode;
+		length++;
+		return true;
+	}
+	
+	public Node remove(int index) {
+		if(index < 0 || index >= length) {
+			return null;
+		}
+		if(index == 0) {
+			removeFirst();
+		}
+		if(index == length - 1) {
+			removeLast();
+		}
+		Node tmp = Dget(index);
+		tmp.next.prev = tmp.prev;
+		tmp.prev.next = tmp.next;
+		tmp.prev = null;
+		tmp.next = null;
+		length--;
+		return tmp;
+	}
 }

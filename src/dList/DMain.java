@@ -22,5 +22,14 @@ public class DMain {
 		System.out.println();
 //		System.out.println("Removed element: " + myList.removeFirst().val);
 		System.out.println(myList.Dget(3).val);
+		System.out.println();
+		myList.set(2, 5);
+		myList.printDL();
+		System.out.println();
+		myList.insert(2, 2);
+		myList.printDL();
+		System.out.println();
+		myList.remove(5);
+		myList.printDL();
 	}
 }
