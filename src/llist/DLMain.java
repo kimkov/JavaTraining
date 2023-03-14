@@ -9,5 +9,12 @@ public class DLMain {
 		dl.append(3);
 		
 		dl.printDL();
+		System.out.println();
+		dl.removeLast();
+		dl.printDL();
+		
+		dl.remove(1);
+		System.out.println();
+		dl.printDL();
 	}
 }

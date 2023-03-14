@@ -64,20 +64,18 @@ public class DoubleList {
 	}
 	
 	public Node removeLast() {
-		if(length == 0) {
-			return null;
+		if(length == 0) return null;
+		Node tmp = tail;
+		if(length == 1) {
+			head = null;
+			tail = null;
 		} else {
-			Node tmp = tail;
 			tail = tail.prev;
 			tail.next = null;
 			tmp.prev = null;
-			length--;
-			if(length == 0) {
-				head = null;
-				tail = null;
-			}
-			return tmp;
 		}
+		length--;
+		return tmp;
 	}
 	
 	public void prepend(int val) {
@@ -159,20 +157,15 @@ public class DoubleList {
 	}
 	
 	public Node remove(int index) {
-		if(index < 0 || index >= length) {
-			return null;
-		}
-		if(index == 0) {
-			removeFirst();
-		}
-		if(index == length - 1) {
-			removeLast();
-		}
+		if(index < 0 || index >= length) return null;
+		if(index == 0) return removeFirst();
+		if(index == length - 1) return removeLast();
+
 		Node tmp = Dget(index);
 		tmp.next.prev = tmp.prev;
 		tmp.prev.next = tmp.next;
-		tmp.prev = null;
 		tmp.next = null;
+		tmp.prev = null;
 		length--;
 		return tmp;
 	}
