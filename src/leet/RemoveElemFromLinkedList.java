@@ -12,6 +12,7 @@ public class RemoveElemFromLinkedList {
 		Node(int val) {
 			this.val = val;
 		}
+		Node(){}
 	}
 	
 	public RemoveElemFromLinkedList(int val) {
@@ -44,12 +45,16 @@ public class RemoveElemFromLinkedList {
 	}
 	
 	public Node RemElem(int val) {
-		Node tmp = head;
-		while(tmp != null) {
-			if(tmp.val == val) {
-				
-			}
-		}
-		return tmp;
+	    Node sentinel = new Node(0);
+	    sentinel.next = head;
+
+	    Node prev = sentinel, curr = head;
+	    while (curr != null) {
+	      if (curr.val == val) prev.next = curr.next;
+	      else prev = curr;
+	      curr = curr.next;
+	    }
+	    return sentinel.next;
+		
 	}
 }

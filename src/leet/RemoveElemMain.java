@@ -7,7 +7,13 @@ public class RemoveElemMain {
 		sl.append(5);
 		sl.append(3);
 		sl.append(4);
+		sl.append(1);
+		sl.append(2);
 		
-		System.out.println(sl.RemElem(2).val);
+		
+		sl.printL();
+		System.out.println();
+		sl.RemElem(1);
+		sl.printL();
 	}
 }
