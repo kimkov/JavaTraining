@@ -13,7 +13,8 @@ class DiagonalTraverse {
 		// Incides that will help us progress through the matrix, one element at a time
 		int row = 0, column = 0;
 		
-		// Variable that help us keep track of what direction we are processing the current diagonal
+		/* Based on the current direction and the tail, we will determine the head of the 
+		 * next diagonal. Initially the direction would be 1 which would indicate up*/
 		int direction = 1;
 		
 		// The final result array
