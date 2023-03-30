@@ -3,7 +3,7 @@ package javaLangTR;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HashMapTr {
+public class hashMapTr {
 	public static void main(String[] args) {
 		// 1. initialize a hash map
 		Map<Integer, Integer> map = new HashMap<>();

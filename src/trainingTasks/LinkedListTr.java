@@ -1,4 +1,4 @@
-package javaLangTR;
+package trainingTasks;
 
 import java.util.LinkedList;
 

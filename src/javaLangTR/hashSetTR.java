@@ -3,7 +3,7 @@ package javaLangTR;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HashSetTR {
+public class hashSetTR {
 	public static void main(String[] args) {
 		// 1. initialize the has set
 		Set<Integer> myHashSet = new HashSet<>();
