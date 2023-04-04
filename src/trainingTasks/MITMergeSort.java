@@ -1,5 +1,7 @@
 package trainingTasks;
 
+import java.util.Arrays;
+
 class fMergeSort {
 	private int[] nums;
 
@@ -80,8 +82,8 @@ public class MITMergeSort {
 		
 		sl.sMerge(nums);
 		
-		for(int n = 0; n < nums.length; n++) {
-			System.out.print(nums[n] + " ");
-		}
+		
+		System.out.println(Arrays.toString(nums));
+
 	}
 }
