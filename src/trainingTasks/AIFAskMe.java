@@ -29,8 +29,8 @@ class Question implements SharedConstants {
 		}
 	}
 }
-	
-class AskMe implements SharedConstants {
+
+public class AIFAskMe implements SharedConstants {
 	static void answer(int result) {
 		switch(result) {
 			case NO:
@@ -53,15 +53,14 @@ class AskMe implements SharedConstants {
 				break;
 		}
 	}
-
-
-public class AIFAskMe {
+	
 	public static void main(String[] args) {
 		Question q = new Question();
 		answer(q.ask());
 		answer(q.ask());
 		answer(q.ask());
 		answer(q.ask());
-		}
+		answer(q.ask());
 	}
 }
+
