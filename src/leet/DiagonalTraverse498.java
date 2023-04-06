@@ -1,5 +1,7 @@
 package leet;
 
+import java.util.Arrays;
+
 class DiagonalTraverse {
 	public int[] findDiagonal(int[][] matrix) {
 		//check for empty matrices
@@ -69,5 +71,6 @@ public class DiagonalTraverse498 {
 		
 		DiagonalTraverse fd = new DiagonalTraverse();
 		fd.findDiagonal(mat);
+		System.out.println(Arrays.toString(fd.findDiagonal(mat)));
 	}
 }
