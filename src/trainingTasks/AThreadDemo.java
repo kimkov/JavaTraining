@@ -22,7 +22,7 @@ class NewThread implements Runnable {
 	}
 }
 
-public class ACurrentThreadDemo {
+public class AThreadDemo {
 	public static void main(String[] args) {
 //		Thread t = Thread.currentThread();
 //		System.out.println("Current thread: " + t);

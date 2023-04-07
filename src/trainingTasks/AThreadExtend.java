@@ -20,7 +20,7 @@ class NewThread1 extends Thread {
 	}
 }
 
-public class AExtendThread {
+public class AThreadExtend {
 	public static void main(String[] args) {
 		NewThread1 nt = new NewThread1();
 		nt.start();
