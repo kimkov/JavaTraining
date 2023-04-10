@@ -15,6 +15,12 @@ enum Apple3 {
 
 public class AEnumConst {
 	public static void main(String[] args) {
+		Apple3 ap;
+		System.out.println("Prise for Apples Winesap - " + Apple3.Winesap.getPrice() + " cents.\n");
 		
+		System.out.println("Price for all sorts of apples: ");
+		for(Apple3 a : Apple3.values()) {
+			System.out.println("Types of apples: " + a + " costs " + a.getPrice() + " cents.");
+		}
 	}
 }
