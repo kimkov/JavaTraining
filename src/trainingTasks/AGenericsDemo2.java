@@ -14,6 +14,13 @@ class Stats<T extends Number> {
 		}
 		return sum / nums.length;
 	}
+	
+	boolean isSameAvg(Stats<?> ob) {
+		if(average() == ob.average()) {
+			return true;
+		}
+		return false;
+	}
 }
 
 public class AGenericsDemo2 {
@@ -28,5 +35,26 @@ public class AGenericsDemo2 {
 		Stats<Double> dOb = new Stats<Double>(dnums);
 		double w = dOb.average();
 		System.out.println("Average sum of dOd is: " + w);
+		
+		Float[] fnums = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f};
+		Stats<Float> fob = new Stats<Float>(fnums);
+		double x = fob.average();
+		System.out.println("Average sum of fob is: " + x);
+		System.out.println();
+		
+		// find which array has the same value;
+		System.out.println("average sum of iOb and Dob ");
+		if(iOb.isSameAvg(dOb)) {
+			System.out.println("Same!");
+		} else {
+			System.out.println("Different");
+		}
+		System.out.println();
+		System.out.println("Average sum of iOb and fob ");
+		if(iOb.isSameAvg(fob)) {
+			System.out.println("Same!");
+		} else {
+			System.out.println("Diff");
+		}
 	}
 }
