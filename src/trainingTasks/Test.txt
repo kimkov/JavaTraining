@@ -1,0 +1,1 @@
+test message from file for Java learning pass!
