@@ -12,7 +12,7 @@ interface ExtB extends ExtA {
 }
 
 // Этот класс должен реализовать все методы из интерфейса А и В
-class MyClass implements ExtB {
+class MyClass1 implements ExtB {
 	public void meth1() {
 		System.out.println("Реализация метода meth1()");
 	}
@@ -28,7 +28,7 @@ class MyClass implements ExtB {
 
 public class AIFExtend {
 	public static void main(String[] args) {
-		MyClass ob = new MyClass();
+		MyClass1 ob = new MyClass1();
 		
 		ob.meth1();
 		ob.meth2();
