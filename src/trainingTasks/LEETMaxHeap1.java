@@ -1,7 +1,6 @@
 package trainingTasks;
 
 import java.util.PriorityQueue;
-import java.util.Collection;
 import java.util.Collections;
 
 public class LEETMaxHeap1 {

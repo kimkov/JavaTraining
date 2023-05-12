@@ -1,7 +1,5 @@
 package leet;
 
-import leet.LList.ListNode;
-
 public class IntersecOfTwo {
 	private ListNode headA;
 	private ListNode headB;

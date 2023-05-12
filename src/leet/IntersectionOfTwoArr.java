@@ -2,8 +2,6 @@ package leet;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
 
 class SIntersect {
 	private int[] nums1;

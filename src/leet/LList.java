@@ -1,7 +1,5 @@
 package leet;
 
-import java.util.LinkedList;
-
 public class LList {
 	private ListNode head;
 	private ListNode tail;
